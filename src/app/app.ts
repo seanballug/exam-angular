@@ -1,12 +1,21 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { NavigationComponent } from './navigation/navigation';
+import { HomeComponent } from './home/home';
+import { ProfileComponent } from './profile/profile';
+import { RegisterComponent } from './register/register';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.scss'],
+  standalone: true,
+  imports: [
+    RouterOutlet,
+    NavigationComponent,
+    HomeComponent,
+    ProfileComponent,
+    RegisterComponent
+  ]
 })
-export class App {
-  protected readonly title = signal('exam-angular');
-}
+export class AppComponent {}

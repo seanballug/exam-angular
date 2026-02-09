@@ -1,0 +1,24 @@
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+  <input formControlName="firstName" placeholder="First Name" required />
+  <input formControlName="lastName" placeholder="Last Name" required />
+  <input formControlName="username" placeholder="Username" required />
+  <input formControlName="email" type="email" placeholder="Email" required />
+  <input formControlName="password" type="password" placeholder="Password" required />
+  <input formControlName="age" type="number" placeholder="Age" required />
+  <input formControlName="dob" type="date" placeholder="Date of Birth" required />
+  <select formControlName="country" required>
+    <option value="">Select Country</option>
+    <option value="us">United States</option>
+    <option value="ca">Canada</option>
+  </select>
+  <label>
+    <input type="radio" formControlName="gender" value="male" required /> Male
+  </label>
+  <label>
+    <input type="radio" formControlName="gender" value="female" required /> Female
+  </label>
+  <label>
+    <input type="checkbox" formControlName="terms" required /> Agree to terms
+  </label>
+  <button type="submit">Register</button>
+</form>
